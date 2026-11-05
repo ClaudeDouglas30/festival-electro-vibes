@@ -1,0 +1,110 @@
+
+/* Réinitialisation */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #101020;
+    color: white;
+    line-height: 1.6;
+}
+
+/* En-tête */
+header {
+    background-color: #191932;
+    padding: 25px;
+    text-align: center;
+}
+
+header h1 {
+    color: #ff4fd8;
+    margin-bottom: 15px;
+}
+
+/* Navigation */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ff4fd8;
+}
+
+/* Section principale */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #29105c, #9b176e);
+}
+
+.hero h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    margin-bottom: 25px;
+}
+
+/* Bouton */
+.btn {
+    display: inline-block;
+    background-color: #ff4fd8;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #d52bb2;
+}
+
+/* Compte à rebours */
+.countdown-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#countdown {
+    font-size: 28px;
+    color: #ff4fd8;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Présentation */
+.about {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.about p {
+    max-width: 700px;
+    margin: 15px auto;
+}
+
+/* Pages Programme et Artistes */
+main section:not(.hero):not(.countdown-section):not(.about) {
+    padding: 25px;
+    text-align: center;
+}
+
+/* Pied de page */
+footer {
+    background-color: #191932;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    color: #ccc;
+}
+
