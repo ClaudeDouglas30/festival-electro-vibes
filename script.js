@@ -50,3 +50,40 @@ function updateCountdown() {
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
+
+// Gestion du formulaire de billetterie
+const reservationForm = document.getElementById("reservationForm");
+
+if (reservationForm) {
+
+    const typeBillet = document.getElementById("typeBillet");
+    const quantite = document.getElementById("quantite");
+    const total = document.getElementById("total");
+    const message = document.getElementById("message");
+
+    // Calcul automatique du prix
+    function calculerTotal() {
+        const prix = Number(typeBillet.value);
+        const nombre = Number(quantite.value);
+
+        total.textContent =
+            "Montant total : " + (prix * nombre) + " DH";
+    }
+
+    typeBillet.addEventListener("change", calculerTotal);
+    quantite.addEventListener("input", calculerTotal);
+
+    // Soumission du formulaire
+    reservationForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const nom = document.getElementById("nom").value;
+
+        message.textContent =
+            "Merci " + nom + " ! Votre demande de réservation a été enregistrée.";
+
+        reservationForm.reset();
+        calculerTotal();
+    });
+}
+
